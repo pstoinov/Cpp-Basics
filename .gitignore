@@ -1,6 +1,15 @@
-# Ignore everything:
+# Ignore everything
 *
 
-# Do not ignore these files:
-*.cpp
-*.sln
+# But not these files...
+!.gitignore
+!*.cpp
+!*.sln
+# etc...
+
+# ...even if they are in subdirectories
+!*/
+
+# if the files to be tracked are in subdirectories
+!*/a/b/file1.txt
+!*/a/b/c/*

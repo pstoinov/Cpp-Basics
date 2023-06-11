@@ -1,28 +1,24 @@
 #include <iostream>
+#include <iomanip>
+#include <cmath>
 
 int main() {
-    int lastDigit;
+    int a, c;
+    double b, d;
 
-    std::cout << "Enter the last digit of the pyramid: ";
-    std::cin >> lastDigit;
+    std::cin >> a;
+    std::cin >> b;
+    std::cin >> c;
+    std::cin >> d;
 
-    int numRows = (lastDigit + 1) / 2;
-    int numSpaces = numRows - 1;
-    int currentNumber = 1;
+    double total = (a * b) + (c * d);
 
-    for (int row = 1; row <= numRows; row++) {
-        for (int space = 1; space <= numSpaces; space++) {
-            std::cout << " ";
-        }
-        
-        for (int col = 1; col <= row * 2 - 1; col++) {
-            std::cout << currentNumber;
-            currentNumber++;
-        }
-        
-        std::cout << std::endl;
-        numSpaces--;
+    std::cout << std::setw(5) << std::fixed << std::setprecision(2) << total << std::endl;
+
+    
+    
+    return 0;
     }
 
-    return 0;
-}
+
+    

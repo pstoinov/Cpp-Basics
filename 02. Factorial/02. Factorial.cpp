@@ -2,19 +2,26 @@
 //
 
 #include <iostream>
+#include <iomanip>
 
-int main()
+double factorial(double n)
 {
-    std::cout << "Input Number: ";
-    int n;
-    std::cin >> n;
-
     int factorial = 1;
     for (int i = 1; i <= n; i++)
     {
         factorial *= i;
     }
-    std::cout << factorial;
+    return factorial;
+}
+int main()
+{
+    std::cout << "Input Number: ";
+    int n;
+    std::cin >> n;
+    long double z = 23.333345;
+    std::cout << std::setprecision(8) << z;
+    
+    std::cout << factorial((double)n);
     return 0;
 }
 
